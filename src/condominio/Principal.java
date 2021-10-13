@@ -1,6 +1,10 @@
 package condominio;
 
 
+/**
+ *
+ * @author Eduardo Jose Gautier
+ */
 
 import java.util.List;
 import java.util.Scanner;
@@ -20,8 +24,8 @@ public class Principal {
         while (true) {
 
             System.out.print("\n┌----------------------------------------------------------┐\n"
-                    + "│                   CONDOMINIO                  │\n"
-                    + "│----------------------------------------------------------│\n"
+                    + "│                   CONDOMINIO                              │\n"
+                    + "│---------------------------------------------------------- │\n"
                     + "│ 1 -  Buscar Morador                                       │\n"
                     + "│ 2 -  Cadastrar Morador                                    │\n"
                     + "│ 3 -  Listar Moradores                                     │\n"
