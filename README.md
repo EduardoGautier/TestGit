@@ -127,8 +127,8 @@
 
 # remover uma pasta dentro do repositorio depois dar o commit e push para atualizar{
 
-# git rm -r <Nome Da Pasta>
-# Exemplo: git rm -r Biblioteca 
+ git rm -r <Nome Da Pasta>
+ Exemplo: git rm -r Biblioteca 
 
 
 
