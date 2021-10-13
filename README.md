@@ -1,70 +1,70 @@
 # TestGit
 
-#obtenha um repositório
-#Crie Uma pasta e Clone um repositorio com o seguinte Comando
+# obtenha um repositório
+# Crie Uma pasta e Clone um repositorio com o seguinte Comando
 
-#git clone <caminhoRepositorio>
-#Exemplo: git clone https://github.com/EduardoGautier/Java.git
-
-
-
-#adicionar & confirmar
-#Adicionar Um Arquivo Especifico
-
-#git add <arquivo>
-#Exemplo: git add README.md
-
-
-#Adicionar Tudo que a de novo no repositorio local
-
-#git add .
-#git add *
-
-
-#Confirmar as Alterações
-
-#git commit -m "comentários das alterações"
-#Exemplo: git commit -m "First Commit"
+# git clone <caminhoRepositorio>
+# Exemplo: git clone https://github.com/EduardoGautier/Java.git
 
 
 
+# adicionar & confirmar
+# Adicionar Um Arquivo Especifico
 
-enviando alterações
-Enviar Alterações para repositorio remoto
-
-git push -u origin <Nome Da Branch>
-Exemplo: git push -u origin main
-
-Se voce quer conectar seu repositório a um servidor remoto
-
-git remote add origin <servidor>
-exemplo: git remote add origin https://github.com/EduardoGautier/ProjAgd.git
+# git add <arquivo>
+# Exemplo: git add README.md
 
 
-ramificar
-Criar uma nova branch e a selecionar
+# Adicionar Tudo que a de novo no repositorio local
 
-git checkout -b <Nome Da Branch>
-Exemplo: git checkout -b subMain
+# git add .
+# git add *
 
-Retornar Para branch
 
-git checkout <Nome Da Branch>
-Exemplo: git checkout main
+# Confirmar as Alterações
 
-uma branch não está disponível a outros a menos que você a envie
-git push -u origin <Nome Da Branch>
-Exemplo: git push -u origin subMain
+# git commit -m "comentários das alterações"
+# Exemplo: git commit -m "First Commit"
 
-Remover Uma Branch
 
-git branch -d <Nome Da Branch>
-Exemplo: git branch -d subMain
-}
 
-atualizar & mesclar{
 
-Atualizar Repositorio
+# enviando alterações
+# Enviar Alterações para repositorio remoto
+
+# git push -u origin <Nome Da Branch>
+# Exemplo: git push -u origin main
+
+# Se voce quer conectar seu repositório a um servidor remoto
+
+# git remote add origin <servidor>
+# exemplo: git remote add origin https://github.com/EduardoGautier/ProjAgd.git
+
+
+# ramificar
+# Criar uma nova branch e a selecionar
+
+# git checkout -b <Nome Da Branch>
+# Exemplo: git checkout -b subMain
+
+# Retornar Para branch
+
+# git checkout <Nome Da Branch>
+# Exemplo: git checkout main
+
+# uma branch não está disponível a outros a menos que você a envie
+# git push -u origin <Nome Da Branch>
+# Exemplo: git push -u origin subMain
+
+# Remover Uma Branch
+
+# git branch -d <Nome Da Branch>
+# Exemplo: git branch -d subMain
+
+
+# atualizar & mesclar
+
+# Atualizar Repositorio
 
 git pull
 
