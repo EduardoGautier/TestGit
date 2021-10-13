@@ -117,17 +117,17 @@
 
 
 
-excluir um repositorio
+# excluir um repositorio
 
-rm -rf .git
-
-
+# rm -rf .git
 
 
 
-remover uma pasta dentro do repositorio depois dar o commit e push para atualizar{
 
-git rm -r <Nome Da Pasta>
+
+# remover uma pasta dentro do repositorio depois dar o commit e push para atualizar{
+
+# git rm -r <Nome Da Pasta>
 Exemplo: git rm -r Biblioteca 
 
 
