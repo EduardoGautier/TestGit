@@ -5,10 +5,6 @@ package condominio;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- *
- * @author Eduardo Jose Gautier
- */
 public class Principal {
 
     private static Condominio condominio;
@@ -24,12 +20,12 @@ public class Principal {
         while (true) {
 
             System.out.print("\n┌----------------------------------------------------------┐\n"
-                    + "│                   SISTEMA DE CONDOMINIO                  │\n"
+                    + "│                   CONDOMINIO                  │\n"
                     + "│----------------------------------------------------------│\n"
-                    + "│ 1 - Buscar Morador                                       │\n"
-                    + "│ 2 - Cadastrar Morador                                    │\n"
-                    + "│ 3 - Listar Moradores                                     │\n"
-                    + "│ 0 - SAIR                                                 │\n"
+                    + "│ 1 -  Buscar Morador                                       │\n"
+                    + "│ 2 -  Cadastrar Morador                                    │\n"
+                    + "│ 3 -  Listar Moradores                                     │\n"
+                    + "│ 0 -  SAIR                                                 │\n"
                     + "└----------------------------------------------------------┘\n"
                     + "Digite a opção desejada:  ");
             int opcao = teclado.nextInt();
