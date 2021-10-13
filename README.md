@@ -131,6 +131,11 @@
 # Exemplo: git rm -r Biblioteca 
 
 
+# deletar uma branch
+
+# git push origin --delete <nome-da-branch>
+
+
 
 
 
