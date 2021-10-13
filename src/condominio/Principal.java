@@ -22,13 +22,16 @@ public class Principal {
         List<Morador> lista = condominio.getCadastrosAp();
 
         while (true) {
-            System.out.println("===== Condominio =====");
-            System.out.println("1 - Buscar Morador");
-            System.out.println("2 - Cadastrar Morador");
-            System.out.println("3 - Listar Moradores");
-            System.out.println("0 - Sair");
 
-            System.out.print("\nDigite a opção desejada: ");
+            System.out.print("\n┌----------------------------------------------------------┐\n"
+                    + "│                   SISTEMA DE CONDOMINIO                  │\n"
+                    + "│----------------------------------------------------------│\n"
+                    + "│ 1 - Buscar Morador                                       │\n"
+                    + "│ 2 - Cadastrar Morador                                    │\n"
+                    + "│ 3 - Listar Moradores                                     │\n"
+                    + "│ 0 - SAIR                                                 │\n"
+                    + "└----------------------------------------------------------┘\n"
+                    + "Digite a opção desejada:  ");
             int opcao = teclado.nextInt();
             teclado.nextLine();
 
