@@ -136,16 +136,16 @@
 # git push origin --delete <nome-da-branch>
 
 
-Mostrar a diferenças entre arquivos
+# Mostrar a diferenças entre arquivos
 
-diff --git a/arquivo b/arquivo
-
-
+# diff --git a/arquivo b/arquivo
 
 
-Lista arquivos preparados, despreparados e que não foram monitorados.
 
-git status
+
+# Lista arquivos preparados, despreparados e que não foram monitorados.
+
+# git status
 
 
 
