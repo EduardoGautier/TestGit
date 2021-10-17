@@ -1,0 +1,43 @@
+ private static void excluirContatoPorNome() {
+        Scanner leia = new Scanner(System.in);
+
+        byte op;
+
+        if (condominio.getCadastrosAp().isEmpty()) {
+            System.out.println("Não existem contatos cadastrados");
+            return;
+        }
+        System.out.print("Digite o nome do contato que deseja excluir: ");
+        Cadastro busca = condominio.pesquisarMorador(leia.next());
+        if (busca == null) {
+            System.out.println("Contato não cadastrado");
+            return;
+        }
+        do {
+            System.out.print("┌-------------------┐\n"
+                    + "│EXCLUSÃO DO MORADOR│\n"
+                    + "└-------------------┘\n"
+                    + "Você tem certeza que deseja excluir o morador?\n"
+                    + "[1] - Sim\n"
+                    + "[2] - Não\n"
+                    + "Digite aqui a opção: ");
+            op = leia.nextByte();
+            switch (op) {
+                case 1:
+                    condominio.removerMoradorPorNome(busca.nome);
+                    System.out.println("O morador foi excluído com sucesso!");
+                    break;
+                case 2:
+                    System.out.println("Exclusão cancelada");
+                    break;
+                default:
+                    System.out.println("Opção inválida\nDigite novamente");
+            }
+        } while (op != 1 && op != 2);
+    }
+
+
+    public boolean removerMoradorPorNome(String nome) {
+        return cadastrosAp.remove(nome);
+    }
+
