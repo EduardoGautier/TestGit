@@ -1,8 +1,6 @@
 package condominio;
 
 
-
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,9 +11,9 @@ public class Principal {
     private static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
-        
+
         condominio = new Condominio(100);
-       
+
         List<Morador> lista = condominio.getCadastrosAp();
 
         while (true) {
@@ -42,6 +40,10 @@ public class Principal {
                 case 3:
                     listarCadastros();
                     break;
+                case 4:
+                    break;
+                case 5:
+                    break;
                 case 0:
                     System.exit(0);
                     break;
@@ -51,12 +53,12 @@ public class Principal {
         }
     }
 
-    
+
     public static void listarCadastros() {
         System.out.println("\n=== Moradores cadastrados ===");
         System.out.println("Código: Nome: Ap: Pago (S/N):");
         for (Cadastro cadastro : condominio.cadastros) {
-            if(cadastro != null) {
+            if (cadastro != null) {
                 System.out.println(cadastro.getCodigo() + "\t"
                         + cadastro.getNome() + "\t"
                         + cadastro.getAp() + "\t"
@@ -127,6 +129,6 @@ public class Principal {
         }
 
     }
-     
+
 
 }

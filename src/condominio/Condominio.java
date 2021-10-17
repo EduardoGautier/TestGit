@@ -44,9 +44,6 @@ public class Condominio {
 
         return false;
     }
-
-
-
     public Cadastro[] buscarCadastro(String ap) {
         Cadastro[] result = new Cadastro[cadastros.length];
         ap = ap.toLowerCase();
