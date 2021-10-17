@@ -1,43 +1,77 @@
- private static void excluirContatoPorNome() {
-        Scanner leia = new Scanner(System.in);
-
-        byte op;
-
-        if (condominio.getCadastrosAp().isEmpty()) {
-            System.out.println("Não existem contatos cadastrados");
-            return;
-        }
-        System.out.print("Digite o nome do contato que deseja excluir: ");
-        Cadastro busca = condominio.pesquisarMorador(leia.next());
-        if (busca == null) {
-            System.out.println("Contato não cadastrado");
-            return;
-        }
-        do {
-            System.out.print("┌-------------------┐\n"
-                    + "│EXCLUSÃO DO MORADOR│\n"
-                    + "└-------------------┘\n"
-                    + "Você tem certeza que deseja excluir o morador?\n"
-                    + "[1] - Sim\n"
-                    + "[2] - Não\n"
-                    + "Digite aqui a opção: ");
-            op = leia.nextByte();
-            switch (op) {
-                case 1:
-                    condominio.removerMoradorPorNome(busca.nome);
-                    System.out.println("O morador foi excluído com sucesso!");
-                    break;
-                case 2:
-                    System.out.println("Exclusão cancelada");
-                    break;
-                default:
-                    System.out.println("Opção inválida\nDigite novamente");
+  public boolean excluirMorador(int codigo) {
+        for (int i = 0; i < cadastros.length; i++) {
+            if (cadastros[i] != null && cadastros[i].codigo == codigo) {
+                cadastros[i] = null;
+                return true;
             }
-        } while (op != 1 && op != 2);
+        }
+        return false;
+    }
+
+    public Cadastro pesquisar(int codigo) {
+        for (int i = 0; i < cadastros.length; i++) {
+            if (cadastros[i] != null && cadastros[i].codigo == codigo)
+                return cadastros[i];
+        }
+        return null;
+    }
+
+    public boolean editarMorador(int codigo, String novoNome, String novoAp, int novoVal) {
+        Cadastro morador = pesquisar(codigo);
+        if (morador == null)
+            return false;
+
+        if (novoNome != null && !novoNome.equals(""))
+            morador.nome = novoNome;
+
+        if (novoAp != null && !novoAp.equals(""))
+            morador.ap = novoAp;
+
+        if (novoVal != 0)
+            morador.val = novoVal;
+
+
+
+        return true;
     }
 
 
-    public boolean removerMoradorPorNome(String nome) {
-        return cadastrosAp.remove(nome);
+
+ private static void excluir() {
+        System.out.println("=== EXCLUIR ===");
+        System.out.println("Digite o código do morador que deseja excluir:");
+        int codigo = teclado.nextInt();
+        teclado.nextLine();
+
+        boolean sucesso = condominio.excluirMorador(codigo);
+        if (sucesso) {
+            System.out.println("morador excluido com sucesso");
+            return;
+        }
+        System.out.println("morador não encontrado");
     }
 
+    private static void editar() {
+        System.out.println("===== EDITAR =====");
+        System.out.println("Digite o código do morador que deseja editar:");
+        int codigo = teclado.nextInt();
+        teclado.nextLine();
+
+        System.out.println("Digite o novo nome (ou deixe em branco):");
+        String novoNome = teclado.nextLine();
+
+        System.out.println("Digite o novo apartamento (ou deixe em branco):");
+        String novoAp = teclado.nextLine();
+
+        System.out.println("Digite o novo valor (ou deixe em branco):");
+        int novoVal = teclado.nextInt();
+
+        teclado.nextLine();
+
+        boolean sucesso = condominio.editarMorador(codigo,  novoNome,  novoAp,  novoVal);
+        if (sucesso) {
+            System.out.println("Edição realizada com sucesso!");
+            return;
+        }
+        System.out.println("Livro não encontrado!");
+    }

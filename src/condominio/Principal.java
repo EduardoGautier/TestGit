@@ -24,6 +24,8 @@ public class Principal {
                     + "│ 1 -  BUSCAR MORADOR                                       │\n"
                     + "│ 2 -  CADASTRAR MORADOR                                    │\n"
                     + "│ 3 -  LISTAR MORADORES                                     │\n"
+                    + "│ 4 -  EXCLUIR MORADOR                                      │\n"
+                    + "│ 5 -  EDITAR MORADOR                                       │\n"
                     + "│ 0 -  SAIR                                                 │\n"
                     + "└----------------------------------------------------------┘\n"
                     + "Digite a opção desejada:  ");
@@ -41,8 +43,10 @@ public class Principal {
                     listarCadastros();
                     break;
                 case 4:
+                    excluir();
                     break;
                 case 5:
+                    editar();
                     break;
                 case 0:
                     System.exit(0);
@@ -87,6 +91,45 @@ public class Principal {
             System.out.println("Condominio cheio - não é possível cadastrar.");
         }
     }
+    private static void excluir() {
+        System.out.println("=== EXCLUIR ===");
+        System.out.println("Digite o código do morador que deseja excluir:");
+        int codigo = teclado.nextInt();
+        teclado.nextLine();
+
+        boolean sucesso = condominio.excluirMorador(codigo);
+        if (sucesso) {
+            System.out.println("morador excluido com sucesso");
+            return;
+        }
+        System.out.println("morador não encontrado");
+    }
+
+    private static void editar() {
+        System.out.println("===== EDITAR =====");
+        System.out.println("Digite o código do livro:");
+        int codigo = teclado.nextInt();
+        teclado.nextLine();
+
+        System.out.println("Digite o novo nome (ou deixe em branco):");
+        String novoNome = teclado.nextLine();
+
+        System.out.println("Digite o novo apartamento (ou deixe em branco):");
+        String novoAp = teclado.nextLine();
+
+        System.out.println("Digite o novo valor (ou deixe em branco):");
+        int novoVal = teclado.nextInt();
+
+        teclado.nextLine();
+
+        boolean sucesso = condominio.editarMorador(codigo,  novoNome,  novoAp,  novoVal);
+        if (sucesso) {
+            System.out.println("Edição realizada com sucesso!");
+            return;
+        }
+        System.out.println("Livro não encontrado!");
+    }
+
 
     private static void pesquisar() {
         while (true) {
