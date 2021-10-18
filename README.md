@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 
 
 #### obtenha um repositório
 #### Crie Uma pasta e Clone um repositorio com o seguinte Comando
-=======
+
 <h1 align="center"> Treinando Git
->>>>>>> 3556a69f8639bf21f727895ec9a741607a0515a3
+
 
   
 
