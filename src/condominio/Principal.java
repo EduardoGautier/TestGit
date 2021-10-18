@@ -1,8 +1,12 @@
 package condominio;
 
 
-import java.util.List;
 import java.util.Scanner;
+
+/**
+ * @author Eduardo Jose Gautier
+ *
+ */
 
 public class Principal {
 
@@ -14,10 +18,8 @@ public class Principal {
 
         condominio = new Condominio(100);
 
-        List<Morador> lista = condominio.getCadastrosAp();
 
         while (true) {
-
             System.out.print("\n┌----------------------------------------------------------┐\n"
                     + "│                   CONDOMINIO                              │\n"
                     + "│---------------------------------------------------------- │\n"
@@ -60,12 +62,13 @@ public class Principal {
 
     public static void listarCadastros() {
         System.out.println("\n=== Moradores cadastrados ===");
-        System.out.println("Código: Nome: Ap: Pago (S/N):");
+        System.out.println("Código: Nome: Ap: Cond: Pago (S/N):");
         for (Cadastro cadastro : condominio.cadastros) {
             if (cadastro != null) {
                 System.out.println(cadastro.getCodigo() + "\t"
                         + cadastro.getNome() + "\t"
                         + cadastro.getAp() + "\t"
+                        + cadastro.getVal() + "\t"
                         + cadastro.getPago());
             }
         }
@@ -87,27 +90,117 @@ public class Principal {
         sucesso = condominio.cadastrarMorador(nome, ap, val, pago);
         if (sucesso) {
             System.out.println("Morador cadastrado com sucesso!");
-        } else {
-            System.out.println("Condominio cheio - não é possível cadastrar.");
+            return;
         }
+            System.out.println("Condominio cheio - não é possível cadastrar.");
+
     }
+
+    private static void pesquisar() {
+        while (true) {
+            System.out.print("\n┌----------------------------------------------------------┐\n"
+                    + "│                                                           │\n"
+                    + "│---------------------------------------------------------- │\n"
+                    + "│ 1 -  Buscar por número do apartamento                     │\n"
+                    + "│ 2 -  Buscar por nome Do Morador                           │\n"
+                    + "│ 0 -  SAIR                                                 │\n"
+                    + "└----------------------------------------------------------┘\n"
+                    + "Digite a opção desejada:  ");
+            int opcao = teclado.nextInt();
+            teclado.nextLine();
+
+            do {
+
+                switch (opcao) {
+                    case 1:
+                        System.out.print("Digite o número do apartamento a pesquisar: ");
+
+                        String pesq = teclado.nextLine();
+                        Cadastro[] cadastros = condominio.buscarCadastro(pesq);
+                        if (cadastros[0] == null) {
+                            System.out.println("cadastro não encontrado!");
+                            return;
+                        }
+                        System.out.println("Cadastros encontrados:");
+                        System.out.println("Código: Nome: Ap: Cond: Pago (S/N):");
+                        for (Cadastro cadastro : cadastros) {
+                            if (cadastro != null) {
+                                System.out.println(cadastro.getCodigo() + "\t" + cadastro.getNome() + "\t" + cadastro.getAp() + "\t" + cadastro.getVal() + "\t" + cadastro.getPago());
+                            }
+                            return;
+                        }
+                        break;
+                    case 2:
+                        System.out.print("Digite o nome do morador que deseja pesquisar: ");
+
+                        String pesqPorNome = teclado.nextLine();
+                        Cadastro[] cadastrosPorNome = condominio.pesquisarMorador(pesqPorNome);
+                        if (cadastrosPorNome[0] == null) {
+                            System.out.println("cadastro não encontrado!");
+                            return;
+                        }
+                        System.out.println("Cadastros encontrados:");
+                        System.out.println("Código: Nome: Ap: Cond: Pago (S/N):");
+                        for (Cadastro cadastro : cadastrosPorNome) {
+                            if (cadastro != null) {
+                                System.out.println(cadastro.getCodigo() + "\t" + cadastro.getNome() + "\t" + cadastro.getAp() + "\t" + cadastro.getVal() + "\t" + cadastro.getPago());
+                            }
+                            return;
+                        }
+                        break;
+                    default:
+
+                        System.out.println("Opção inválida\nDigite novamente");
+                }
+
+            } while (opcao != 1 && opcao != 2);
+        }
+
+    }
+
     private static void excluir() {
+
+        byte op;
+
+        Scanner leia = new Scanner(System.in);
         System.out.println("=== EXCLUIR ===");
         System.out.println("Digite o código do morador que deseja excluir:");
         int codigo = teclado.nextInt();
-        teclado.nextLine();
 
-        boolean sucesso = condominio.excluirMorador(codigo);
-        if (sucesso) {
-            System.out.println("morador excluido com sucesso");
-            return;
-        }
-        System.out.println("morador não encontrado");
+        do {
+            System.out.print("┌-------------------┐\n"
+                    + "│EXCLUSÃO DO CONTATO│\n"
+                    + "└-------------------┘\n"
+                    + "Você tem certeza que deseja excluir todos os contatos?\n"
+                    + "[1] - Sim\n"
+                    + "[2] - Não\n"
+                    + "Digite aqui a opção: ");
+            teclado.nextLine();
+            op = leia.nextByte();
+            switch (op) {
+                case 1:
+                    boolean sucesso = condominio.excluirMorador(codigo);
+                    if (sucesso) {
+                        System.out.println("morador excluido com sucesso");
+                        return;
+                    }
+                        System.out.println("morador não encontrado");
+                    break;
+                case 2:
+                       System.out.println("Exclusão cancelada");
+                    break;
+                default:
+                      System.out.println("Opção inválida\nDigite novamente");
+            }
+        } while (op != 1 && op != 2);
+
+
     }
+
 
     private static void editar() {
         System.out.println("===== EDITAR =====");
-        System.out.println("Digite o código do livro:");
+        System.out.println("Digite o código do morador:");
         int codigo = teclado.nextInt();
         teclado.nextLine();
 
@@ -122,55 +215,12 @@ public class Principal {
 
         teclado.nextLine();
 
-        boolean sucesso = condominio.editarMorador(codigo,  novoNome,  novoAp,  novoVal);
+        boolean sucesso = condominio.editarMorador(codigo, novoNome, novoAp, novoVal);
         if (sucesso) {
             System.out.println("Edição realizada com sucesso!");
             return;
         }
-        System.out.println("Livro não encontrado!");
-    }
-
-
-    private static void pesquisar() {
-        while (true) {
-            System.out.println("=== Busca ===");
-            System.out.println("1 - Buscar por número do apartamento");
-            System.out.println("0 - Sair Do Sistema");
-
-            System.out.print("\nDigite a opção desejada: ");
-            int opcao = teclado.nextInt();
-            teclado.nextLine();
-            do {
-
-                switch (opcao) {
-                    case 1:
-                        System.out.print("Digite o número do apartamento a pesquisar: ");
-
-                        String pesq = teclado.nextLine();
-                        Cadastro[] cadastros = condominio.buscarCadastro(pesq);
-                        if (cadastros[0] == null) {
-                            System.out.println("cadastro não encontrado!");
-                            return;
-                        }
-                        System.out.println("Cadastros encontrados:");
-                        System.out.println("Código: Nome: Ap: Pago (S/N):");
-                        for (Cadastro cadastro : cadastros) {
-                            if (cadastro != null) {
-                                System.out.println(cadastro.getCodigo() + "\t" + cadastro.getNome() + "\t" + cadastro.getAp() + "\t" + cadastro.getPago());
-                            } else {
-                                return;
-                            }
-                        }
-                        break;
-                    case 0:
-                        System.exit(0);
-                        break;
-
-                }
-
-            } while (opcao != 0);
-        }
-
+        System.out.println("Morador Não Encontrado!");
     }
 
 

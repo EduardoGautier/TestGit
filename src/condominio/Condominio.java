@@ -1,6 +1,7 @@
 package condominio;
 
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,26 +9,20 @@ import java.util.List;
 /**
  *
  * @author Eduardo Jose Gautier
+ *
  */
+
 public class Condominio {
 
     Cadastro[] cadastros;
-    private List<Morador> cadastrosAp;
+
 
     private int proximoCodigo = 1;
 
     public Condominio(int tamanho) {
         cadastros = new Cadastro[tamanho];
-        this.cadastrosAp = new ArrayList<>();
 
-    }
 
-    public List<Morador> getCadastrosAp() {
-        return cadastrosAp;
-    }
-
-    public void setCadastrosAp(List<Morador> cadastrosAp) {
-        this.cadastrosAp = cadastrosAp;
     }
 
 
@@ -59,13 +54,17 @@ public class Condominio {
         return result;
     }
 
-    public Cadastro pesquisarMorador(String ap) {
-        for (int i = 0; i < this.cadastrosAp.size(); i++) {
-            if (this.cadastrosAp.get(i).getAp().equalsIgnoreCase(ap)) {
-                return this.cadastrosAp.get(i);
+    public Cadastro[] pesquisarMorador(String nome) {
+        Cadastro[] result = new Cadastro[cadastros.length];
+        nome = nome.toLowerCase();
+
+        int iRes = 0;
+        for (Cadastro cadastro : cadastros) {
+            if ((cadastro != null) && (cadastro.getNome().toLowerCase().contains(nome))) {
+                result[iRes++] = cadastro;
             }
         }
-        return null;
+        return result;
     }
 
     public boolean excluirMorador(int codigo) {
@@ -104,6 +103,8 @@ public class Condominio {
 
         return true;
     }
+
+
 
 
 
