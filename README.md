@@ -36,33 +36,31 @@
 # enviando alterações
 # Enviar Alterações para repositorio remoto
 
-# git push -u origin <Nome Da Branch>
-# Exemplo: git push -u origin main
+
+# git push -u origin main
 
 # Se voce quer conectar seu repositório a um servidor remoto
 
-# git remote add origin <servidor>
-# git remote add origin https://github.com/EduardoGautier/ProjAgd.git
+# git remote add origin servidor
 
 
 # ramificar
 # Criar uma nova branch e a selecionar
 
-# git checkout -b <Nome Da Branch>
+# git checkout -b NomeDaBranch
 
 # Retornar Para branch
 
-# git checkout <Nome Da Branch>
-# Exemplo: git checkout main
+# git checkout NomeDaBranch
+
 
 # uma branch não está disponível a outros a menos que você a envie
-# git push -u origin <Nome Da Branch>
-# Exemplo: git push -u origin subMain
+# git push -u origin NomeDaBranch
+
 
 # Remover Uma Branch
 
-# git branch -d <Nome Da Branch>
-# Exemplo: git branch -d subMain
+# git branch -d NomeDaBranch
 
 
 # atualizar & mesclar
@@ -101,8 +99,7 @@
 
 # Se fizer algo errado pode sobreescrever as alterações locais usando o commando
 
-# git checkout -- <arquivo>
-# git checkout -- Biblioteca
+# git checkout -- arquivo
 
 # Caso queira remover todas as alterações e commits locais,
 # recupere o histórico mais recente do servidor e aponte para seu branch master local desta forma
@@ -119,30 +116,26 @@
 # git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
 
 
-
 # excluir um repositorio
 
 # rm -rf .git
 
 
 
-
-
 # remover uma pasta dentro do repositorio depois dar o commit e push para atualizar{
 
-# git rm -r <Nome Da Pasta>
-# Exemplo: git rm -r Biblioteca 
+# git rm -r NomeDaPasta
+
 
 
 # deletar uma branch
 
-# git push origin --delete <nome-da-branch>
+# git push origin --delete nome-da-branch
 
 
 # Mostrar a diferenças entre arquivos
 
 # diff --git a/arquivo b/arquivo
-
 
 
 
