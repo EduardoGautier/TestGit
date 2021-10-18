@@ -1,179 +1,180 @@
-<h1 align="center"> Treinando Git
+# Treinamento Git
 
 
-#### obtenha um repositório
-#### Crie Uma pasta e Clone um repositorio com o seguinte Comando
 
 
+## Tecnologia
 
+<img src="https://img.shields.io/badge/Git-330F63?style=for-the-badge&logo=gitlab&logoColor=white" alt="Git"/>
 
-  
 
-#### Crie Uma pasta e Clone um repositorio com o seguinte Comando
 
-#### git clone caminhoRepositorio
 
-<h2>  
 
-#### adicionar & confirmar
-#### Adicionar Um Arquivo Especifico
 
-#### git add arquivo
-  
-<h2>  
 
-####  Adicionar Tudo que a de novo no repositorio local
 
-#### git add .
-#### git add *
 
-<h2>  
-  
-#### Confirmar as Alterações
+### (obrigatório)
 
-#### git commit -m "comentários das alterações"
 
-<h2>  
+- <a href="https://git-scm.com/downloads">Git 2.3+</a>
 
 
-#### enviando alterações
-#### Enviar Alterações para repositorio remoto
 
-#### git push -u origin NomeDaBranch
 
-<h2>  
+## O Que Ja Conhecia
 
-#### Se voce quer conectar seu repositório a um servidor remoto
 
-#### git remote add origin servidor
-  
-<h2>    
+##### Criar um novo repositório
+```
+git init
 
+```
 
-#### ramificar
-#### Criar uma nova branch e a selecionar
+##### obtenha um repositório
+```
+git clone <caminhoRepositorio>
+```
 
-#### git checkout -b NomeDaBranch
-  
-<h2>    
+##### Adicionar Um Arquivo Especifico
+```
+git add <arquivo>
 
-#### Retornar Para branch
+```
 
-#### git checkout NomeDaBranch
-  
-<h2>  
+#####  Adicionar Tudo que a de novo no repositorio local
 
-#### uma branch não está disponível a outros a menos que você a envie
+```
+git add .
+git add *
 
-#### git push -u origin NomeDaBranch
+```
 
-<h2>  
-  
-#### Remover Uma Branch local
+##### Confirmar as Alterações
 
-#### git branch -d NomeDaBranch
+```
+git commit -m "comentários das alterações"
 
-<h2>  
+```
 
-#### atualizar & mesclar
-  
-#### Atualizar Repositorio
+##### Enviar Alterações para repositorio remoto
+```
 
-#### git pull
+git push -u origin <NomeDaBranch>
 
- <h2>   
-  
-#### na sua pasta de trabalho para obter e fazer merge (mesclar) alterações remotas.
-#### para fazer merge de um outro branch ao seu branch ativo (ex. main), use
+```
+##### Criar uma nova branch e a selecionar
+```
+git checkout -b <NomeDaBranch>
 
-#### git merge branch
-   
+```
+#### Adicionar Tudo Confirmando As Alterações e Enviando Para Repositorio 
 
-#### o git vai tentar fazer o merge das alterações automaticamente
-#### Mais isso pode resultar em conflitos que voce tera que resolver Manualmente
-#### Depois de alterar, você precisa marcá-los como merged com o
+```
+git add.
+git commit -m "Nova Alteração Da Branch"
+git push -u origin <NomeDaBranch>
 
-#### git add arquivo
-#### git add *
+```
 
-#### Para pre visualizar alterações
+##### Voltando Para Branch Principal
 
-#### git diff branchorigem branchdestino
+```
+git checkout <main>
 
-<h2>  
+```
 
-#### rotulando
 
-#### Você pode obter o id de commit com
-#### git log
 
-<h2>  
+## Novidades
 
-#### sobrescrever alterações locais
 
-#### Se fizer algo errado pode sobreescrever as alterações locais usando o commando
+##### mesclar alterações
 
-#### git checkout -- arquivo
+```
+git merge <NomeDaBranch>
 
-  
-<h2>  
-  
-#### Caso queira remover todas as alterações e commits locais,
-#### recupere o histórico mais recente do servidor e aponte para seu branch master local desta forma
+```
 
-#### git fetch origin
-#### git reset --hard origin/main
+##### Confirmar Merge
 
+```
+git push -u origin main
 
-<h2>  
+```
 
-#### Encontre o ID do commit dele, você pode fazer isso com o git log.
 
-#### git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
+##### Para pre visualizar alterações
 
-<h2>  
+```
+git diff <BranchOrigem> <BranchDestino>
 
+```
 
-#### excluir um repositorio
 
-#### rm -rf .git
+##### obter o id de commit 
 
+```
+git log
 
+```
 
+##### sobreescrever  alterações locais 
 
 
-#### remover uma pasta dentro do repositorio depois dar o commit e push para atualizar{
+```
+git checkout -- arquivo
 
-#### git rm -r NomeDaPasta
+```
 
 
+##### remover todas as alterações e commits locais,
+##### recupere o histórico mais recente do servidor e aponte para seu branch master local desta forma
 
+```
+ git fetch origin
+ git reset --hard origin/main
 
-#### deletar uma branch remotagit fetch
+```
+##### excluir um repositorio
 
-#### git push origin --delete
+```
+ rm -rf .git
 
+```
+##### remover uma pasta dentro do repositorio 
+
+```
+git rm -r NomeDaPasta
+
+```
+##### deletar uma branch remota 
+
+```
+git push origin --delete <NomeDaBranch>
+
+```
 
 #### Mostrar a diferenças entre arquivos
 
-#### diff --git a/arquivo b/arquivo
+
+```
+diff --git a/arquivo b/arquivo
+
+```
+##### Lista arquivos preparados, despreparados e que não foram monitorados.
+
+```
+git status
+
+```
 
 
+## References: 
 
-
-#### Lista arquivos preparados, despreparados e que não foram monitorados.
-
-#### git status
-
-
-<h2>  
-
-  
-#### Referencias 
-  
   #### https://rogerdudler.github.io/git-guide/index.pt_BR.html
   #### https://git-scm.com/docs
   #### http://book.git-scm.com/
 
   
-  <h2>
