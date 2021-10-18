@@ -28,7 +28,7 @@
 # Confirmar as Alterações
 
 # git commit -m "comentários das alterações"
-# Exemplo: git commit -m "First Commit"
+
 
 
 
@@ -42,14 +42,13 @@
 # Se voce quer conectar seu repositório a um servidor remoto
 
 # git remote add origin <servidor>
-# exemplo: git remote add origin https://github.com/EduardoGautier/ProjAgd.git
+# git remote add origin https://github.com/EduardoGautier/ProjAgd.git
 
 
 # ramificar
 # Criar uma nova branch e a selecionar
 
 # git checkout -b <Nome Da Branch>
-# Exemplo: git checkout -b subMain
 
 # Retornar Para branch
 
