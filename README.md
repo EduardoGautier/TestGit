@@ -1,167 +1,148 @@
-# TestGit
+#### obtenha um repositório
+#### Crie Uma pasta e Clone um repositorio com o seguinte Comando
 
-# Iniciar Um Repositrio No Git
+#### git clone caminhoRepositorio
 
-# git init
 
-# obtenha um repositório
-# Crie Uma pasta e Clone um repositorio com o seguinte Comando
 
-# git clone <caminhoRepositorio>
 
+#### adicionar & confirmar
+#### Adicionar Um Arquivo Especifico
 
+#### git add arquivo
 
-# adicionar & confirmar
-# Adicionar Um Arquivo Especifico
 
-# git add arquivo
 
+#### Adicionar Tudo que a de novo no repositorio local
 
+#### git add .
+#### git add *
 
-# Adicionar Tudo que a de novo no repositorio local
 
-# git add .
-# git add *
+#### Confirmar as Alterações
 
+#### git commit -m "comentários das alterações"
 
-# Confirmar as Alterações
 
-# git commit -m "comentários das alterações"
 
 
 
+#### enviando alterações
+#### Enviar Alterações para repositorio remoto
 
+#### git push -u origin NomeDaBranch
 
-# enviando alterações
-# Enviar Alterações para repositorio remoto
 
+#### Se voce quer conectar seu repositório a um servidor remoto
 
-# git push -u origin Nome Da Branch
+#### git remote add origin servidor
 
 
+#### ramificar
+#### Criar uma nova branch e a selecionar
 
-# git push -u origin main
+#### git checkout -b NomeDaBranch
 
+#### Retornar Para branch
 
-# Se voce quer conectar seu repositório a um servidor remoto
+#### git checkout NomeDaBranch
 
-# git remote add origin servidor
 
+#### uma branch não está disponível a outros a menos que você a envie
 
+#### git push -u origin NomeDaBranch
 
 
-# ramificar
-# Criar uma nova branch e a selecionar
+#### Remover Uma Branch local
 
-# git checkout -b NomeDaBranch
+#### git branch -d NomeDaBranch
 
-# Retornar Para branch
 
-# git checkout NomeDaBranch
 
+#### atualizar & mesclar
+  
+#### Atualizar Repositorio
 
-# uma branch não está disponível a outros a menos que você a envie
-# git push -u origin NomeDaBranch
+#### git pull
 
+#### na sua pasta de trabalho para obter e fazer merge (mesclar) alterações remotas.
+#### para fazer merge de um outro branch ao seu branch ativo (ex. main), use
 
-# Remover Uma Branch
+#### git merge branch
 
 
-# git branch -d Nome Da Branch
+#### o git vai tentar fazer o merge das alterações automaticamente
+#### Mais isso pode resultar em conflitos que voce tera que resolver Manualmente
+#### Depois de alterar, você precisa marcá-los como merged com o
 
+#### git add arquivo
+#### git add *
 
-# git branch -d NomeDaBranch
+#### Para pre visualizar alterações
 
+#### git diff branchorigem branchdestino
 
-# atualizar & mesclar
 
-# Atualizar Repositorio
 
-# git pull
+#### rotulando
 
-# na sua pasta de trabalho para obter e fazer merge (mesclar) alterações remotas.
-# para fazer merge de um outro branch ao seu branch ativo (ex. main), use
+#### Você pode obter o id de commit com
+#### git log
 
-# git merge branch
 
-# o git vai tentar fazer o merge das alterações automaticamente
-# Mais isso pode resultar em conflitos que voce tera que resolver Manualmente
-# Depois de alterar, você precisa marcá-los como merged com o
 
-# git add arquivo
-# git add *
+#### sobrescrever alterações locais
 
-# Para pre visualizar alterações
+#### Se fizer algo errado pode sobreescrever as alterações locais usando o commando
 
-# git diff branchorigem branchdestino
+#### git checkout -- arquivo
 
 
-# rotulando
+#### Caso queira remover todas as alterações e commits locais,
+#### recupere o histórico mais recente do servidor e aponte para seu branch master local desta forma
 
-# Você pode obter o id de commit com
-# git log
+#### git fetch origin
+#### git reset --hard origin/main
 
 
 
-# sobrescrever alterações locais
 
-# Se fizer algo errado pode sobreescrever as alterações locais usando o commando
+#### Encontre o ID do commit dele, você pode fazer isso com o git log.
 
-# git checkout -- arquivo
+#### git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
 
-# Caso queira remover todas as alterações e commits locais,
-# recupere o histórico mais recente do servidor e aponte para seu branch master local desta forma
 
-# git fetch origin
-# git reset --hard origin/main
 
 
+#### excluir um repositorio
 
+#### rm -rf .git
 
 
-# Encontre o ID do commit dele, você pode fazer isso com o git log.
 
-# git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
 
 
-# excluir um repositorio
+#### remover uma pasta dentro do repositorio depois dar o commit e push para atualizar{
 
-# rm -rf .git
+#### git rm -r NomeDaPasta
 
 
 
-# remover uma pasta dentro do repositorio depois dar o commit e push para atualizar{
 
+#### deletar uma branch remotagit fetch
 
-# git rm -r NomDaPasta
-# Exemplo: git rm -r Biblioteca 
+#### git push origin --delete
 
-# git rm -r NomeDaPasta
 
+#### Mostrar a diferenças entre arquivos
 
+#### diff --git a/arquivo b/arquivo
 
 
-# deletar uma branch
 
-# git push origin --delete nome-da-branch
 
+#### Lista arquivos preparados, despreparados e que não foram monitorados.
 
-# Mostrar a diferenças entre arquivos
-
-# diff --git a/arquivo b/arquivo
-
-
-
-# Lista arquivos preparados, despreparados e que não foram monitorados.
-
-# git status
-
-
-
-
-
-
-
-
+####git status
 
 
