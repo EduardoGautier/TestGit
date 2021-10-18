@@ -1,10 +1,10 @@
-
+<h1 align="center"> Treinando Git
 
 
 #### obtenha um repositório
 #### Crie Uma pasta e Clone um repositorio com o seguinte Comando
 
-<h1 align="center"> Treinando Git
+
 
 
   
