@@ -10,11 +10,6 @@
 
 
 
-
-
-
-
-
 ### (obrigatório)
 
 
@@ -55,6 +50,14 @@ git add *
 
 ```
 git commit -m "comentários das alterações"
+
+```
+
+##### Adicionar Um Caminho Remoto
+
+
+```
+git remote add origin git://suaUrl
 
 ```
 
@@ -169,6 +172,23 @@ diff --git a/arquivo b/arquivo
 git status
 
 ```
+
+##### Remover Caminho Remoto E Adicionar Outra
+
+```
+git remote remove origin
+git remote add origin git://suaUrl
+
+```
+
+##### Alterar Caminho Remoto 
+
+```
+git remote set-url origin git://suaUrl
+
+```
+
+
 
 
 ## References: 
