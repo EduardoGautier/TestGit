@@ -35,7 +35,12 @@
 # enviando alterações
 # Enviar Alterações para repositorio remoto
 
+
 # git push -u origin Nome Da Branch
+
+
+
+# git push -u origin main
 
 
 # Se voce quer conectar seu repositório a um servidor remoto
@@ -44,11 +49,11 @@
 
 
 
+
 # ramificar
 # Criar uma nova branch e a selecionar
 
 # git checkout -b NomeDaBranch
-
 
 # Retornar Para branch
 
@@ -56,13 +61,16 @@
 
 
 # uma branch não está disponível a outros a menos que você a envie
-# git push -u origin <Nome Da Branch>
-# Exemplo: git push -u origin subMain
+# git push -u origin NomeDaBranch
+
 
 # Remover Uma Branch
 
+
 # git branch -d Nome Da Branch
 
+
+# git branch -d NomeDaBranch
 
 
 # atualizar & mesclar
@@ -122,23 +130,25 @@
 
 
 
-
-
 # remover uma pasta dentro do repositorio depois dar o commit e push para atualizar{
+
 
 # git rm -r NomDaPasta
 # Exemplo: git rm -r Biblioteca 
 
+# git rm -r NomeDaPasta
+
+
+
 
 # deletar uma branch
 
-# git push origin --delete <nome-da-branch>
+# git push origin --delete nome-da-branch
 
 
 # Mostrar a diferenças entre arquivos
 
 # diff --git a/arquivo b/arquivo
-
 
 
 
