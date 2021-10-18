@@ -14,7 +14,8 @@
 #### git add arquivo
   
 <h2>  
-#### Adicionar Tudo que a de novo no repositorio local
+
+####  Adicionar Tudo que a de novo no repositorio local
 
 #### git add .
 #### git add *
