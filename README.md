@@ -143,6 +143,6 @@
 
 #### Lista arquivos preparados, despreparados e que não foram monitorados.
 
-####git status
+#### git status
 
 
