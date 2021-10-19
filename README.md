@@ -46,6 +46,28 @@ git add *
 
 ```
 
+##### Confirmar as Alterações
+
+```
+git commit -m "comentários das alterações"
+
+```
+
+##### Adicionar Um Caminho Remoto
+
+
+```
+git remote add origin git://suaUrl
+
+```
+
+##### Enviar Alterações para repositorio remoto
+```
+
+git push -u origin <NomeDaBranch>
+
+```
+
   
 #### Referencias 
   
