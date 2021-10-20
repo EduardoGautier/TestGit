@@ -246,6 +246,18 @@ git cherry-pick --abort
  git pull
  git merge subMenu
  git push
+ 
+ 
+ git checkout subMenu
+ git add .
+ git commit -m "Testando Cherry Pick"
+ git push -u origin subMenu
+ git log
+ 
+ 
+ git checkout main
+ git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
+
 
 
 
