@@ -3,9 +3,7 @@ package condominio;
 
 
 /**
- *
  * @author Eduardo Jose Gautier
- *
  */
 
 public abstract class Cadastro {
