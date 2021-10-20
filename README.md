@@ -258,7 +258,7 @@ git cherry-pick --abort
   #### https://git-scm.com/docs
   #### http://book.git-scm.com/
   #### https://www.atlassian.com/br/git/tutorials/merging-vs-rebasing
-  #### https://www.atlassian.com/br/git/tutorials
+  #### https://metring.com.br/artigos/git
   
 
   
