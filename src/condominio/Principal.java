@@ -21,7 +21,7 @@ public class Principal {
 
         while (true) {
             System.out.print("\n┌----------------------------------------------------------┐\n"
-                    + "│                   CONDOMINIO                              │\n"
+                    + "│                  SISTEMA DE CONDOMINIO                    │\n"
                     + "│---------------------------------------------------------- │\n"
                     + "│ 1 -  BUSCAR MORADOR                                       │\n"
                     + "│ 2 -  CADASTRAR MORADOR                                    │\n"
@@ -54,7 +54,7 @@ public class Principal {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Opção inválida.");
+                    System.out.println("Opção inválida\nDigite Novamente.");
             }
         }
     }
@@ -62,7 +62,7 @@ public class Principal {
 
     public static void listarCadastros() {
         System.out.println("\n=== Moradores cadastrados ===");
-        System.out.println("Código: Nome: Ap: Cond: Pago (S/N):");
+        System.out.println("Código:    Nome:    Ap:    Cond:     Pago (S/N):");
         for (Cadastro cadastro : condominio.cadastros) {
             if (cadastro != null) {
                 System.out.println(cadastro.getCodigo() + "\t"
@@ -101,7 +101,7 @@ public class Principal {
             System.out.print("\n┌----------------------------------------------------------┐\n"
                     + "│                                                           │\n"
                     + "│---------------------------------------------------------- │\n"
-                    + "│ 1 -  Buscar por número do apartamento                     │\n"
+                    + "│ 1 -  Buscar por número do apartamento do morador          │\n"
                     + "│ 2 -  Buscar por nome Do Morador                           │\n"
                     + "│ 0 -  SAIR                                                 │\n"
                     + "└----------------------------------------------------------┘\n"
@@ -122,7 +122,7 @@ public class Principal {
                             return;
                         }
                         System.out.println("Cadastros encontrados:");
-                        System.out.println("Código: Nome: Ap: Cond: Pago (S/N):");
+                          System.out.println("Código:    Nome:    Ap:    Cond:     Pago (S/N):");
                         for (Cadastro cadastro : cadastros) {
                             if (cadastro != null) {
                                 System.out.println(cadastro.getCodigo() + "\t" + cadastro.getNome() + "\t" + cadastro.getAp() + "\t" + cadastro.getVal() + "\t" + cadastro.getPago());
@@ -140,7 +140,7 @@ public class Principal {
                             return;
                         }
                         System.out.println("Cadastros encontrados:");
-                        System.out.println("Código: Nome: Ap: Cond: Pago (S/N):");
+                        System.out.println("Código:    Nome:    Ap:    Cond:     Pago (S/N):");
                         for (Cadastro cadastro : cadastrosPorNome) {
                             if (cadastro != null) {
                                 System.out.println(cadastro.getCodigo() + "\t" + cadastro.getNome() + "\t" + cadastro.getAp() + "\t" + cadastro.getVal() + "\t" + cadastro.getPago());
