@@ -224,6 +224,32 @@ git cherry-pick --abort
 
 ```
 
+##### Comandos Mais Usados
+
+
+```
+
+ git init
+ git add .
+ git commit -m "First Commit"
+ git branch -M main
+ git remote add origin https://github.com/EduardoGautier/TestGit.git
+ git push -u origin main
+
+ git checkout -b subMenu	
+ git add.
+ git commit -m "Alteracao Feita"
+ git push -u origin subMenu
+
+ git checkout main
+
+ git pull
+ git merge subMenu
+ git push
+
+
+
+```
 
 
 ## References: 
