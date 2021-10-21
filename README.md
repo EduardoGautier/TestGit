@@ -242,6 +242,8 @@ git cherry-pick --abort
  git push -u origin subMenu
 
  git checkout main
+ 
+ git diff subMenu..main
 
  git pull
  git merge subMenu
