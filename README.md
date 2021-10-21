@@ -211,9 +211,19 @@ git cherry-pick <IdDoCommitInicial>^..<IdDoCommitFinal>
 ##### Abort, para cancelar o cherry pick.
 
 ```
+
 git cherry-pick <IdDoCommit>
 
 ```
+
+##### Desfazer alterações local ou remotamente 
+
+```
+
+git revert <NumeroHashOuId>
+
+```
+
 
 
 ##### Alterar Caminho Remoto 
