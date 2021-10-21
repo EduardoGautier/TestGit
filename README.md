@@ -261,6 +261,7 @@ git cherry-pick --abort
  git cherry-pick f13bd3c3531f26e805c606729857f39987a2420f
  
  git branch -d subMenu
+ git push origin --delete subMenu
 
 ```
 
