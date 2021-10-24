@@ -234,7 +234,7 @@ git cherry-pick --abort
 
 ```
 
-##### Comandos Mais Usados
+##### Comandos Mais Ultilizados
 
 
 ```
