@@ -1,4 +1,4 @@
-# Treinamento Git
+# Treinamento Git Grupo Dimed
 
 
 
@@ -10,7 +10,7 @@
 
 
 
-### (obrigatório)
+### obrigatório
 
 
 - <a href="https://git-scm.com/downloads">Git 2.3+</a>
