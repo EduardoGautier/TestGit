@@ -3,7 +3,9 @@ package condominio;
 
 
 /**
+ *
  * @author Eduardo Jose Gautier
+ *
  */
 
 public abstract class Cadastro {
@@ -38,7 +40,6 @@ public abstract class Cadastro {
     }
 
     public int getVal(){ return val; }
-
 
 
 

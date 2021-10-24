@@ -78,12 +78,16 @@ public class Condominio {
     }
 
     public Cadastro pesquisar(int codigo) {
-        for (int i = 0; i < cadastros.length; i++) {
-            if (cadastros[i] != null && cadastros[i].codigo == codigo)
-                return cadastros[i];
+        for (Cadastro cadastro: cadastros) {
+            if (cadastros != null && cadastro.codigo == codigo)
+                return cadastro;
         }
         return null;
     }
+
+
+
+
 
     public boolean editarMorador(int codigo, String novoNome, String novoAp, int novoVal) {
         Cadastro morador = pesquisar(codigo);
@@ -103,8 +107,6 @@ public class Condominio {
 
         return true;
     }
-
-
 
 
 

@@ -35,12 +35,6 @@ public class Morador extends Cadastro{
 
 
 
-
-
-
-
-
-
 }
 
 
