@@ -62,9 +62,17 @@ git remote add origin git://suaUrl
 ```
 
 ##### Enviar Alterações para repositorio remoto
+
 ```
 
 git push -u origin <NomeDaBranch>
+
+```
+
+##### Baixar Atualizações da branch remote pra local
+
+```
+git pull
 
 ```
 
@@ -105,6 +113,15 @@ git merge <NomeDaBranch>
 
 ```
 git push -u origin main
+
+```
+
+##### Baixar Atualição de branch Especifica 
+
+
+```
+
+git pull origin <NomeDaBranch>
 
 ```
 
